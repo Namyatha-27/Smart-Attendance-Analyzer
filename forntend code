@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Attendance Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Smart Attendance Analyzer</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <br><br>
+    <button type="submit">Upload Class Image</button>
+</form>
+
+{% if students %}
+<h2>Present Students</h2>
+<ul>
+    {% for student in students %}
+        <li>{{ student }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+</body>
+</html>
